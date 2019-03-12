@@ -13,11 +13,11 @@
 
 	 $(document).ready(function(){
 		 
-	 	$("#birthday").datepicker({
-			dateFormat: 'yy-mm-dd',
-		});
-
-	 });
+			$("#birthday").datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+     	});
+	 }
 </script>
 </head>
 <body>
@@ -68,7 +68,7 @@
 				<h3 class="total_title">查询结果</h3>
 				<ul>
 					<li><input type="button" value="新增" class="addition"
-						data-url="${pageContext.request.contextPath}/user/edit.action"
+						data-url="${pageContext.request.contextPath}/salary/edit.action"
 						onclick="Common.showPage(this);" /></li>
 				</ul>
 			</div>
@@ -111,7 +111,7 @@
 
 								<td class="delete" style="width: 210px; text-align: center;">
 									<p><input type="button" onclick="Common.showPage(this);" value="编辑" 
-									data-url="${pageContext.request.contextPath}/user/update.action" />
+									data-url="${pageContext.request.contextPath}/salary/update.action" />
 									<input type="button" onclick="Common.showPage(this);" value="禁用"
 									data-url="#" />
 								</td>
@@ -129,7 +129,7 @@
 
 								<td class="delete" style="width: 210px; text-align: center;">
 									<p><input type="button" onclick="Common.showPage(this);" value="编辑"
-											  data-url="${pageContext.request.contextPath}/user/update.action" />
+											  data-url="${pageContext.request.contextPath}/salary/update.action" />
 										<input type="button" onclick="Common.showPage(this);" value="禁用"
 											   data-url="#" />
 								</td>

@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SalaryController {
 
 
-    @RequestMapping("/manage")
+    @RequestMapping("manage")
     public String manage(){
-        return "Salary/Manage";
+        return "salary/manage";
     }
 
-    @RequestMapping("/info")
+    @RequestMapping("info")
     public String info(){
-        return "Salary/Info";
+        return "salary/info";
     }
 
-    @RequestMapping("/edit")
+    @RequestMapping("edit")
     public String edit(){
-        return "Salary/Edit";
+        return "salary/edit";
     }
 
-    @RequestMapping("/update")
+    @RequestMapping("update")
     public String update(){
-        return "Salary/Update";
+        return "salary/update";
     }
 }

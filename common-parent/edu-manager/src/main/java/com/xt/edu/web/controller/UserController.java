@@ -25,23 +25,23 @@ public class UserController {
         return "index";
     }
 
-    @RequestMapping("/manage")
+    @RequestMapping("manage")
     public String manage(){
-        return "User/Manage";
+        return "user/manage";
     }
 
-    @RequestMapping("/info")
+    @RequestMapping("info")
     public String info(){
-        return "User/Info";
+        return "user/info";
     }
 
-    @RequestMapping("/edit")
+    @RequestMapping("edit")
     public String edit(){
-        return "User/Edit";
+        return "user/edit";
     }
 
-    @RequestMapping("/update")
+    @RequestMapping("update")
     public String update(){
-        return "User/Update";
+        return "user/update";
     }
 }
