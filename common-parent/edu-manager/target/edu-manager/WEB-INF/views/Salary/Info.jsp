@@ -13,11 +13,11 @@
 
 	 $(document).ready(function(){
 		 
-	 	$("#birthday").datepicker({
-			dateFormat: 'yy-mm-dd',
-		});
-
-	 });
+			$("#birthday").datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+     	});
+	 }
 </script>
 </head>
 <body>

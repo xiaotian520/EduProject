@@ -1,30 +1,32 @@
 package com.xt.edu.web.controller;
 
+import com.xt.edu.model.Salary;
+import com.xt.edu.web.controller.base.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("salary")
-public class SalaryController {
+public class SalaryController extends BaseController<Salary> {
 
 
-    @RequestMapping("manage")
+    @RequestMapping(MANAGE)
     public String manage(){
-        return "salary/manage";
+        return MANAGE_PAGE;
     }
 
-    @RequestMapping("info")
+    @RequestMapping(INFO)
     public String info(){
-        return "salary/info";
+        return INFO_PAGE;
     }
 
-    @RequestMapping("edit")
+    @RequestMapping(EDIT)
     public String edit(){
-        return "salary/edit";
+        return EDIT_PAGE;
     }
 
-    @RequestMapping("update")
+    @RequestMapping(UPDATE)
     public String update(){
-        return "salary/update";
+        return UPDATE_PAGE;
     }
 }
