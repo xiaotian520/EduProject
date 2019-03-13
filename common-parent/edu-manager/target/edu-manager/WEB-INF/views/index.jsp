@@ -22,8 +22,8 @@
 						<ul>
 							<li><h2 class="version"></h2></li>
 							<li><span class="header_hi">Hi,</span><span
-								class="header_usename">小天</span>！</li>
-							<li><a href="javascript:void(0)" onclick="this.href='#'">注销</a></li>
+								class="header_usename">${USER_SESSION.name}</span>！</li>
+							<li><a href="javascript:void(0)" onclick="this.href='${pageContext.request.contextPath}/user/logout.action'">注销</a></li>
 							<li class="rel"><a href="#" class="system_infor"
 								id="system_infor" onclick="showMessageList();">系统消息(0)</a>
 								<div id="Div1" class="dn"></div></li>
@@ -45,14 +45,34 @@
 							data-url="${pageContext.request.contextPath}/user/manage.action">用户管理</a>
 						</li>
 						<li class="navContent">
-							<a href="#" class="showNav" id="finance" data-name="main_iframe"
-							onclick="Common.switchNavigation(this);"
-							data-url="${pageContext.request.contextPath}/salary/manage.action">工资管理</a>
+							<a href="#" class="showNav" id="department" data-name="main_iframe"
+							   onclick="Common.switchNavigation(this);"
+							   data-url="${pageContext.request.contextPath}/department/manage.action">部门管理</a>
+						</li>
+						<li class="navContent">
+							<a href="#" class="showNav" id="employee" data-name="main_iframe"
+							   onclick="Common.switchNavigation(this);"
+							   data-url="${pageContext.request.contextPath}/employee/manage.action">员工管理</a>
 						</li>
 						<li class="navContent">
 							<a href="#" class="showNav" id="customer" data-name="main_iframe"
 							   onclick="Common.switchNavigation(this);"
-							   data-url="${pageContext.request.contextPath}/user/manage.action">客户管理</a>
+							   data-url="${pageContext.request.contextPath}/customer/manage.action">客户管理</a>
+						</li>
+						<li class="navContent">
+							<a href="#" class="showNav" id="salary" data-name="main_iframe"
+							onclick="Common.switchNavigation(this);"
+							data-url="${pageContext.request.contextPath}/salary/manage.action">工资管理</a>
+						</li>
+						<li class="navContent">
+							<a href="#" class="showNav" id="student" data-name="main_iframe"
+							   onclick="Common.switchNavigation(this);"
+							   data-url="${pageContext.request.contextPath}/student/manage.action">学生管理</a>
+						</li>
+						<li class="navContent">
+							<a href="#" class="showNav" id="course" data-name="main_iframe"
+							   onclick="Common.switchNavigation(this);"
+							   data-url="${pageContext.request.contextPath}/course/manage.action">课程管理</a>
 						</li>
 					</ul>
 				</nav>

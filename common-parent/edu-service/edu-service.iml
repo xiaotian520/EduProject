@@ -15,8 +15,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="edu-model" />
-    <orderEntry type="module" module-name="edu-model" />
     <orderEntry type="module" module-name="edu-dao" />
     <orderEntry type="module" module-name="edu-model" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.4.6" level="project" />

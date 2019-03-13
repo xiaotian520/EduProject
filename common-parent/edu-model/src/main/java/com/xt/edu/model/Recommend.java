@@ -1,5 +1,9 @@
 package com.xt.edu.model;
 
+/**
+ * 学生报名课程模块
+ * 推荐人等
+ */
 public class Recommend {
     /**
      *

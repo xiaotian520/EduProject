@@ -2,6 +2,9 @@ package com.xt.edu.model;
 
 import java.util.Date;
 
+/**
+ * 提成结算
+ */
 public class Royalty {
     /**
      *
