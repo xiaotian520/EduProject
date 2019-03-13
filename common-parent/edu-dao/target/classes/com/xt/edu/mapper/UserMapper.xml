@@ -268,4 +268,7 @@
       emp_id = #{empId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectByNameAndPassword" resultType="user" parameterType="string">
+      select * from t_user where name= '${username}' and password = '${password}'
+  </select>
 </mapper>

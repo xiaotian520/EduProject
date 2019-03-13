@@ -22,8 +22,8 @@
 						<ul>
 							<li><h2 class="version"></h2></li>
 							<li><span class="header_hi">Hi,</span><span
-								class="header_usename">小天</span>！</li>
-							<li><a href="javascript:void(0)" onclick="this.href='#'">注销</a></li>
+								class="header_usename">${USER_SESSION.name}</span>！</li>
+							<li><a href="javascript:void(0)" onclick="this.href='${pageContext.request.contextPath}/user/logout.action'">注销</a></li>
 							<li class="rel"><a href="#" class="system_infor"
 								id="system_infor" onclick="showMessageList();">系统消息(0)</a>
 								<div id="Div1" class="dn"></div></li>

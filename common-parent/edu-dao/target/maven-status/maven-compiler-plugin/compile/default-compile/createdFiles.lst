@@ -1,0 +1,12 @@
+com\xt\edu\mapper\WebcourseMapper.class
+com\xt\edu\mapper\EmployeeMapper.class
+com\xt\edu\mapper\CustomerMapper.class
+com\xt\edu\mapper\DepartmentMapper.class
+com\xt\edu\mapper\OrderMapper.class
+com\xt\edu\mapper\UserMapper.class
+com\xt\edu\mapper\SalaryMapper.class
+com\xt\edu\mapper\StudentMapper.class
+com\xt\edu\mapper\RoyaltyMapper.class
+com\xt\edu\mapper\RecommendMapper.class
+com\xt\edu\mapper\base\BaseMapper.class
+com\xt\edu\mapper\CourseMapper.class

@@ -32,8 +32,8 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
 
 
     @Override
-    public User login(String name, String password) {
-        return null;
+    public User login(String username, String password) {
+        return userMapper.selectByNameAndPassword(username, password);
     }
 
     @Override
