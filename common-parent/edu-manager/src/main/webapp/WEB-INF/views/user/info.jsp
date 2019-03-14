@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="xt" uri="http://xt.com/common/"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
 <title>用户信息</title>
@@ -36,30 +41,18 @@
 						<tr>
 							<td class="input_text tar">用户名：</td>
 							<td>
-								<p><input type="text" id="username" name="username" style="width: 120px;"></p>
+								<p><input type="text" id="usernmae" name="username" style="width: 120px;"></p>
 							</td>
-							<td class="input_text tar">性别：</td>
+							<td class="input_text tar">姓名：</td>
 							<td>
-								<p>
-									<select>
-										<option value="">男</option>
-										<option value="">女</option>
-									</select>
-								</p>
-							</td>
-							<td class="input_text tar">省份：</td>
-							<td>
-								<p><input type="text" style="width: 120px;"></p>
-							</td>
-							<td class="input_text tar">身份证：</td>
-							<td>
-								<p><input type="text" style="width: 120px;"></p>
+								<p><input type="text" id="realname" name="realname" style="width: 120px;"></p>
 							</td>
 						</tr>
 						<tr>
-							<td class="input_text tar">生日：</td>
-							<td colspan="7"><p><input type="text" id="birthday" style="width:120px;" readonly="readonly"></p></td>
-
+							<td class="input_text tar">员工编号：</td>
+							<td>
+								<p><input type="text" style="width: 120px;"></p>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -82,14 +75,9 @@
 				<thead>
 					<tr>
 						<td style="width: 80px; text-align: center;"><p>用户名</p></td>
-						<td style="width: 100px"><p>邮箱</p></td>
-						<td style="width: 80px"><p>QQ</p></td>
-						<td style="width: 80px"><p>手机号码</p></td>
-						<td style="width: 100px"><p>支付宝</p></td>
-						<td style="width: 80px"><p>姓名</p></td>
-						<td style="width: 80px"><p>总收入</p></td>
-						<td style="width: 80px"><p>余额</p></td>
-						<td style="width: 100px"><p>注册日期</p></td>
+						<td style="width: 100px"><p>密码</p></td>
+						<td style="width: 100px"><p>姓名</p></td>
+						<td style="width: 100px"><p>员工编号</p></td>
 						<td class="total_table_contral" style="width: 210px"><p>操作</p></td>
 					</tr>
 				</thead>
@@ -99,16 +87,12 @@
 					style="width: 100%; background-color: #FFF;">
 
 					<tbody>
+						<c:forEach items="${page.rows}" var="row">
 							<tr onclick="Common.switchLine(this,event);">
-								<td style="width: 80px; text-align: center;"><p><span >xt</span></p></td>
-								<td style="width: 100px; text-align: center;"><p><span >xt@qq.com</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >qq</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >tel</span></p></td>
-								<td style="width: 100px; text-align: center;"><p><span >payAccount</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >AA</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >amount</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >balance</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >BB</span></p></td>
+								<td style="width: 80px; text-align: center;"><p><span >${row.username}123</span></p></td>
+								<td style="width: 100px; text-align: center;"><p><span >${row.password}444</span></p></td>
+								<td style="width: 100px; text-align: center;"><p><span >${row.realname}</span></p></td>
+								<td style="width: 100px; text-align: center;"><p><span >${row.empId}</span></p></td>
 
 								<td class="delete" style="width: 210px; text-align: center;">
 									<p><input type="button" onclick="Common.showPage(this);" value="编辑" 
@@ -117,38 +101,23 @@
 									data-url="#" />
 								</td>
 							</tr>
-							<tr onclick="Common.switchLine(this,event);">
-								<td style="width: 80px; text-align: center;"><p><span >xt</span></p></td>
-								<td style="width: 100px; text-align: center;"><p><span >xt@qq.com</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >qq</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >tel</span></p></td>
-								<td style="width: 100px; text-align: center;"><p><span >payAccount</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >AA</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >amount</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >balance</span></p></td>
-								<td style="width: 80px; text-align: center;"><p><span >BB</span></p></td>
-
-								<td class="delete" style="width: 210px; text-align: center;">
-									<p><input type="button" onclick="Common.showPage(this);" value="编辑"
-											  data-url="${pageContext.request.contextPath}/user/update.action" />
-										<input type="button" onclick="Common.showPage(this);" value="禁用"
-											   data-url="#" />
-								</td>
-							</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>
 		</div>
 		
 		<!-- 分页查询 -->
+
 		<div class="page">
 			<p class="page_number">
-				<a href="javascript:void(0)" onclick="this.href='#'">[第一页]</a>
+				<%--<a href="javascript:void(0)" onclick="this.href='#'">[第一页]</a>
 				<a href="javascript:void(0)" onclick="this.href='#'">[上一页]</a>
 				<a href="javascript:void(0)" onclick="this.href='#'">[下一页]</a>
 				<a href="javascript:void(0)" onclick="this.href='#'">[最后一页]</a>
-				<span>1/2</span>
-				<span>每页显示</span>8条记录 共20条记录
+				<span>1/2</span>--%>
+					<xt:page url="${pageContext.request.contextPath }/user/info.action" />
+				<span>每页显示</span>${page.size}条记录 共${page.total}条记录
 			</p>
 		</div>
 		

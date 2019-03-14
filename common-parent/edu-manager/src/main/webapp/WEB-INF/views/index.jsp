@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<%@ page trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta content="小天IT教育后台管理系统" name="keywords" />
@@ -22,7 +26,7 @@
 						<ul>
 							<li><h2 class="version"></h2></li>
 							<li><span class="header_hi">Hi,</span><span
-								class="header_usename">${USER_SESSION.name}</span>！</li>
+								class="header_usename">${USER_SESSION.username}</span>！</li>
 							<li><a href="javascript:void(0)" onclick="this.href='${pageContext.request.contextPath}/user/logout.action'">注销</a></li>
 							<li class="rel"><a href="#" class="system_infor"
 								id="system_infor" onclick="showMessageList();">系统消息(0)</a>

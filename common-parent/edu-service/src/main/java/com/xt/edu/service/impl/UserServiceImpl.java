@@ -3,8 +3,12 @@ package com.xt.edu.service.impl;
 import com.xt.edu.model.User;
 import com.xt.edu.service.IUserService;
 import com.xt.edu.service.base.BaseServiceImpl;
+import com.xt.edu.utils.Page;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -34,6 +38,32 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
     @Override
     public User login(String username, String password) {
         return userMapper.selectByNameAndPassword(username, password);
+    }
+
+
+    @Override
+    public Page<User> findUserList(Integer page, Integer rows, String username, String realname, Integer emp_id) {
+        User user = new User();
+        if (StringUtils.isNotBlank(username)){
+            user.setUsername(username);
+        }
+        if (StringUtils.isNotBlank(realname)){
+            user.setRealname(realname);
+        }
+        user.setEmpId(emp_id);
+        user.setStart((page-1) * rows);
+        user.setRows(rows);
+        System.out.println("********************************"+user);
+        List<User> users = userMapper.selectUserList(user);
+        int count =  userMapper.selectUserListCount(user);
+        Page<User> result = new Page<>();
+        result.setPage(page);
+        result.setRows(users);
+        result.setSize(rows);
+        result.setTotal(count);
+        System.out.println(users);
+        System.out.println("=================="+rows);
+        return result;
     }
 
     @Override

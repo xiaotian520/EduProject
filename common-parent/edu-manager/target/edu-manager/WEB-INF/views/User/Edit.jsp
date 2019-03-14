@@ -45,76 +45,32 @@
 										<input name="password" type="text" value="" id="password"  style="width: 150px;" />
 									</p>
 								</td>
-								<td class="input_text tar">手机号码：</td>
-								<td>
-									<p>
-										<input name="tel" type="text" value="" id="tel" style="width: 150px;" />
-									</p>
-								</td>
 							</tr>
 							<tr>
-								<td class="input_text tar">QQ：</td>
-								<td>
-									<p>
-										<input name="qq" type="text" value="" id="qq" style="width: 150px;" /> 
-									</p>
-								</td>
-								<td class="input_text tar">email：</td>
-								<td>
-									<p>
-										<input name="iemail" type="text" value="" id="iemail" style="width: 150px;" />
-									</p>
-								</td>
-								<td class="input_text tar">身份证：</td>
-								<td>
-									<p>
-										<input name="idCard" type="text" value="" id="idCard"  style="width: 150px;" />
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td class="input_text tar">支付方式：</td>
-								<td>
-									<p>
-									  <select name="payType" id="payType" >
-										<option value="">请选支付方式</option>
-									</select>
-									</p>
-								</td>
-								<td class="input_text tar">支付账号：</td>
-								<td>
-									<p>
-										<input name="payAccount" type="text" value="" id="payAccount" style="width: 150px;" />
-									</p>
-								</td>
 								<td class="input_text tar">姓名：</td>
 								<td>
 									<p>
-										<input name="payAccountName" type="text" value="" id="payAccountName" style="width: 150px;" />
+										<input name="realname" type="text" value="" id="realname"  style="width: 150px;" />
+									</p>
+								</td>
+								<td class="input_text tar">性别：</td>
+								<td>
+									<p>
+										<input name="gender" type="text" value="" id="gender"  style="width: 150px;" />
 									</p>
 								</td>
 							</tr>
-
-							<tr><td colspan="6" style="margin-top: 116px;"><h5>添加设备</h5></td></tr>
 							<tr>
-								<td class="input_text tar">设备类型：</td>
+								<td class="input_text tar">员工编号：</td>
 								<td>
 									<p>
-									  <select name="deviceType" id="deviceType" >
-										<option value="">请选设备类型</option>
-									</select>
+										<input name="emp_id" type="text" value="" id="emp_id"  style="width: 150px;" />
 									</p>
 								</td>
-								<td class="input_text tar">设备ID：</td>
+								<td class="input_text tar">所属部门：</td>
 								<td>
 									<p>
-										<input name="deviceId" type="text" value="" id="deviceId" style="width: 150px;" />
-									</p>
-								</td>
-								<td class="input_text tar">设备机型：</td>
-								<td>
-									<p>
-										<input name="deviceDetail" type="text" value="" id="deviceDetail" style="width: 150px;" />
+										<input name="department" type="text" value="" id="department"  style="width: 150px;" />
 									</p>
 								</td>
 							</tr>

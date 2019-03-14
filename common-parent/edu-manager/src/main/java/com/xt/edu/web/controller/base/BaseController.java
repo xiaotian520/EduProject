@@ -1,8 +1,6 @@
 package com.xt.edu.web.controller.base;
 
 import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.sql.SQLOutput;
 
 public abstract class BaseController<T> {
 

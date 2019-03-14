@@ -2,11 +2,13 @@ package com.xt.edu.web.controller;
 
 import com.xt.edu.model.User;
 import com.xt.edu.service.IUserService;
+import com.xt.edu.utils.Page;
 import com.xt.edu.web.controller.base.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
@@ -55,14 +57,26 @@ public class UserController extends BaseController<User> {
         return "index";
     }
 
-    @RequestMapping(MANAGE)
-    public String manage(){
-        return MANAGE_PAGE;
+    @RequestMapping(INFO)
+    public String list(@RequestParam(defaultValue="1")Integer page,
+                       @RequestParam(defaultValue="8")Integer rows,
+                       String username, String realname, Integer emp_id, Model model) {
+        // 条件查询所有用户
+        System.out.println("============================="+page+rows);
+        Page<User> users = userService.findUserList(page, rows, username,realname, emp_id);
+        model.addAttribute("page", users);
+        System.out.println(users.getRows()+"--------------");
+        // 添加参数
+        model.addAttribute("username", username);
+        model.addAttribute("realname", realname);
+        model.addAttribute("emp_id", emp_id);
+        return INFO_PAGE;
     }
 
-    @RequestMapping(INFO)
+
+    @RequestMapping(MANAGE)
     public String info(){
-        return INFO_PAGE;
+        return MANAGE_PAGE;
     }
 
     @RequestMapping(EDIT)

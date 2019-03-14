@@ -2,6 +2,7 @@ package com.xt.edu.service;
 
 import com.xt.edu.model.User;
 import com.xt.edu.service.base.IBaseService;
+import com.xt.edu.utils.Page;
 
 public interface IUserService extends IBaseService<User> {
 
@@ -14,4 +15,6 @@ public interface IUserService extends IBaseService<User> {
 
     //特有的方法
     public User login(String username,String password);
+
+    public Page<User> findUserList(Integer page, Integer rows,String username, String realname, Integer emp_id);
 }

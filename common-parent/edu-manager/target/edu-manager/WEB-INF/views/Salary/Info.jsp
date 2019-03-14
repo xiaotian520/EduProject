@@ -33,9 +33,9 @@
 				<div class="search_table">
 					<table cellpadding="0" cellspacing="0" style="width: 900px">
 						<tr>
-							<td class="input_text tar">用户名：</td>
+							<td class="input_text tar">姓名：</td>
 							<td>
-								<p><input type="text" id="username" name="username" style="width: 120px;"></p>
+								<p><input type="text" id="realname" name="realname" style="width: 120px;"></p>
 							</td>
 							<td class="input_text tar">性别：</td>
 							<td>
@@ -46,19 +46,14 @@
 									</select>
 								</p>
 							</td>
-							<td class="input_text tar">省份：</td>
+							<td class="input_text tar">员工编号：</td>
 							<td>
 								<p><input type="text" style="width: 120px;"></p>
 							</td>
-							<td class="input_text tar">身份证：</td>
+							<td class="input_text tar">所属部门：</td>
 							<td>
 								<p><input type="text" style="width: 120px;"></p>
 							</td>
-						</tr>
-						<tr>
-							<td class="input_text tar">生日：</td>
-							<td colspan="7"><p><input type="text" id="birthday" style="width:120px;" readonly="readonly"></p></td>
-
 						</tr>
 					</table>
 				</div>
